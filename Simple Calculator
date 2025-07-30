@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Welcome message
+    cout << "=== Simple Calculator ===\n\n";
+
+    // Declare variables
+    double firstNumber, secondNumber;
+    char operatorSymbol;
+
+    // Input first number
+    cout << "Enter the first number: ";
+    cin >> firstNumber;
+
+    // Input operator
+    cout << "Enter an operator (+, -, *, /): ";
+    cin >> operatorSymbol;
+
+    // Input second number
+    cout << "Enter the second number: ";
+    cin >> secondNumber;
+
+    cout << "\nCalculating result...\n";
+
+    // Perform calculation based on operator
+    switch (operatorSymbol) {
+        case '+':
+            cout << "Result: " << firstNumber + secondNumber << endl;
+            break;
+        case '-':
+            cout << "Result: " << firstNumber - secondNumber << endl;
+            break;
+        case '*':
+            cout << "Result: " << firstNumber * secondNumber << endl;
+            break;
+        case '/':
+            if (secondNumber != 0)
+                cout << "Result: " << firstNumber / secondNumber << endl;
+            else
+                cout << " Error: Division by zero is not allowed.\n";
+            break;
+        default:
+            cout << " Invalid operator entered.\n";
+    }
+
+    cout << "\nThank you for using the calculator!\n";
+    return 0;
+}
